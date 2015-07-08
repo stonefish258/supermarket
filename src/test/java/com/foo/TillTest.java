@@ -55,4 +55,16 @@ public class TillTest {
         assertEquals(0.25d, total, DELTA);
     }
 
+    @Test
+    public void basketContainingOneAppleAndOneOrangeShouldCostEightyFivePence() {
+
+        // given
+        String[] basket = {"Apple","Orange"};
+
+        // when
+        double total = till.calculateTotal(basket);
+
+        // then
+        assertEquals(0.85d, total, DELTA);
+    }
 }
